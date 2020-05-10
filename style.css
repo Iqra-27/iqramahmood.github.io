@@ -103,7 +103,7 @@ ul li.active a {
     margin-top: 25px;
     text-align: center;
     align-content: center;
-    font-family: Klee;
+    font-family: 'Raleway', sans-serif;
     font-size: 45px;
     background-color: skyblue;
     color: white;
@@ -151,7 +151,7 @@ ul li.active a {
     margin-top: 25px;
     margin-left: 50px;
     align-content: center;
-    font-family: Klee;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     /*background-color: white;*/
     color: black;
@@ -161,9 +161,9 @@ ul li.active a {
 #my_story_para {
     width: 40%;
     margin-left: 50px;
-    text-align: justify;
+    justify-content: center;
     /*align-content: center;*/
-    /*font-family: Klee;*/
+    font-family: 'Open Sans', sans-serif;
     /*font-size: 30px;*/
     /*background-color: white;*/
     /*color: black;*/
@@ -174,7 +174,7 @@ ul li.active a {
     width: fit-content;
     margin-top: 20px;
     align-content: center;
-    font-family: Klee;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     /*background-color: white;*/
     color: black;
@@ -184,6 +184,7 @@ ul li.active a {
 .profile_list p {
     text-decoration: none;
     color: black;
+    font-family: 'Open Sans', sans-serif;
     /*background-color: white;*/
     width: 400px
 
@@ -196,7 +197,7 @@ ul li.active a {
     /*margin-top: 25px;*/
     margin-left: 50px;
     /*align-content: center;*/
-    font-family: Klee;
+    font-family: 'Raleway', sans-serif;
     font-size: 20px;
     /*background-color: white;*/
     color: black;
@@ -206,7 +207,7 @@ ul li.active a {
 .interests_list {
     float: left;
     list-style-type: none;
-    margin-left: 50px;
+    margin-left: 20px;
 
 }
 
@@ -216,7 +217,7 @@ ul li.active a {
     padding: 5px 20px;
     border: 1px solid transparent;
     background-color: skyblue;
-
+    font-family: 'Open Sans', sans-serif;
     margin: 0px 0px 50px 50px;
 
 }
@@ -266,7 +267,7 @@ ul li.active a {
     padding: 10px;
     text-align: center;
     color: black;
-    cursor: pointer;
+   
 
 }
 
@@ -280,9 +281,11 @@ ul li.active a {
     margin-bottom: 30px;
     margin-top: 16px;
     transition: 0.3s linear;
+    cursor: pointer;
 
 
 }
+
 
 .skillset-icon i {
 
@@ -328,6 +331,139 @@ ul li.active a {
     }
 }
 
+.lightbox{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh; 
+    background: rgba(0, 0, 0, 0.5);
+    color: black;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform ease-in-out 400ms;
+   
+}
+
+.lightbox:target{
+    transform: scale(1,1);
+    transform-origin: left;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+
+}
+
+
+.lightbox-content{
+    display: flex;
+    max-width: 500px;
+    max-height: 600px;
+    flex-direction: column;
+    align-content: center;
+    padding: 0em 1em 0 1em;
+    align-items: center;
+ 
+
+
+    /* max-width: 30%;
+    max-height: 100%; */
+    /* background:skyblue; */
+    background-image: linear-gradient(rgb(195, 225, 236), rgb(121, 201, 233));
+    /* box-shadow: 5px 5px 5px white; */
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    /* padding: 1em; */
+    /* position: relative;
+    text-align: center;
+    justify-content: center;
+    align-content: center; */
+    
+    
+}
+
+
+.lightbox-icon{
+
+    margin-top: -1em;
+    margin-bottom: 1em;
+    z-index: 5;
+  
+    /* margin-top: -50px; */
+    border-radius: 50%; 
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 80px;
+    border: 3px solid black;
+    background: white;
+    color:  black;
+    justify-content: center;
+    align-content: center;
+    /* transform: rotate(45deg); */
+    /* margin-bottom: 30px; */
+}
+
+.lightbox-icon i {
+
+    display: flex;
+    justify-content: center;
+    /* line-height: 70px;  */
+    /* transform: rotate(-45deg); */
+    font-size: 26px;
+
+}
+
+.lightbox_title{
+
+    font-family: 'Changa', sans-serif;
+    padding-bottom: 0.25em;
+
+}
+
+.lightbox_body{
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+}
+
+.closebox{
+    width:500px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* border: 6px solid purple; */
+}
+.close{
+    /* position: absolute; */
+    width: 1.25em;
+    height: 1.25em;
+    background: red;
+    /* top: -0.625em;
+    right: -0.625em; */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    /* border: 2px solid green; */
+    
+}
+
+.close::after{
+    content: 'X';
+    color: white;
+}
+
 .contact_header {
     font-size: 50px;
     margin-bottom: 20px;
@@ -368,7 +504,7 @@ ul li.active a {
 }
 
 .btn:hover i {
-    transform: scale(1, 3);
+    transform: scale(2, 2);
     color: #f1f1f1;
 }
 
