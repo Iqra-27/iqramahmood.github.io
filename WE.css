@@ -185,5 +185,18 @@ main-timeline .description {
 .main-timeline .timeline:nth-child(3n) i{
     box-shadow: 0 0 0 2px deepskyblue;
 
+}
+
+.main-timeline .timeline:nth-child(4n) .timeline-content,
+.main-timeline .timeline:nth-child(4n) .timeline-content:before,
+.main-timeline .timeline:nth-child(4n) .timeline-content:after,
+.main-timeline .timeline:nth-child(4n) i{
+    background: rgb(1, 139, 185);
+
+
+}
+
+.main-timeline .timeline:nth-child(4n) i{
+    box-shadow: 0 0 0 2px rgb(1, 139, 185);
 
 }
